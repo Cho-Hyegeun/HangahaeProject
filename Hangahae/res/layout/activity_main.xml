@@ -5,6 +5,7 @@
     tools:context=".MainActivity" >
 
     <TextView
+        android:id="@+id/app_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -12,5 +13,12 @@
         android:layout_marginTop="90dp"
         android:text="@string/app_name"
         android:textSize="50sp" />
+
+    <com.facebook.widget.LoginButton
+        android:id="@+id/FBLoginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
 
 </RelativeLayout>
