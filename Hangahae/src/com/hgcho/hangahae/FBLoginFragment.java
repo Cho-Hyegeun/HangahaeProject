@@ -12,10 +12,13 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 public class FBLoginFragment extends Fragment {
 	private static final String APP_ID = "550523868299964";
 	private static final String TAG = "FBLoginFragment";
+	private Button fbLoginButton;
+	private static Session fbSession;
 	private Session.StatusCallback callback = new Session.StatusCallback() {
 		
 		@Override
@@ -29,10 +32,18 @@ public class FBLoginFragment extends Fragment {
 	public void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
-		LoginButton nLoginButton = (LoginButton)getActivity().findViewById(R.id.FBLoginButton);
-		nLoginButton.setApplicationId(APP_ID);
-		uiHelper = new UiLifecycleHelper(getActivity(), callback);
-		uiHelper.onCreate(savedInstanceState);
+		//LoginButton nLoginButton = (LoginButton)getActivity().findViewById(R.id.FBLoginButton);
+		fbLoginButton = (Button)getActivity().findViewById(R.id.FBLoginButton);
+		fbSession = Session.getActiveSession();
+		if (fbSession == null) {
+			fbLoginButton.setText("Login");
+			// TO DO : proceed login process 
+		} else {
+			fbLoginButton.setText("Logout");
+			
+		}
+		//uiHelper = new UiLifecycleHelper(getActivity(), callback);
+		//uiHelper.onCreate(savedInstanceState);
 	}
 	
 	@Override

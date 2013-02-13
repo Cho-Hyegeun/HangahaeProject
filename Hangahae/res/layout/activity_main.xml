@@ -14,7 +14,7 @@
         android:text="@string/app_name"
         android:textSize="50sp" />
 
-    <com.facebook.widget.LoginButton
+    <android.widget.Button
         android:id="@+id/FBLoginButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

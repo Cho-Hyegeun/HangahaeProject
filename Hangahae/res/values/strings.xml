@@ -3,5 +3,9 @@
 
     <string name="app_name">Hangahae</string>
     <string name="menu_settings">Settings</string>
-
+    <string name="app_id">550523868299964</string>
+    <string name="applicationId">550523868299964</string>
+    <string name="profile_hanga_on">오늘 한가해</string>
+    <string name="profile_hanga_off">오늘 바빠</string>
+    
 </resources>
